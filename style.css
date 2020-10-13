@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box
+}
+
+html {
+  font-family: 'Dosis', sans-serif;
+  line-height: 1.6;
+  color: #666;
+  background: rgb(153, 122, 122);
+}
+
+
+.container {
+  width: 100%;
+  border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  }
+  
+  .cardContainer {  
+    margin: 75px 75px 75px 75px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card1 {    
+    width: 400px;
+    height: 700px;
+    color: black;
+    display: flex;
+    background-image: linear-gradient(180deg, #f7f7f796 0%, #0a000798 100%);
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card2 {    
+    width: 400px;
+    height: 700px;
+    color: black;
+    display: flex;
+    background-image: linear-gradient(180deg, #f7f7f796 0%, #0a000798 100%);
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+
+  /* .card:hover {
+      transform: translate3D(0, -10px, 0);
+  } */
+
+  .hide-me {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(.75);
+  }
+
+  .bg-img {
+    background-size: cover;
+    min-height: 180px;
+    background-position: center;
+    background-color: #ccc;
+  }
+  
+  .content {
+    padding: 15px;
+  }
+  
+  button {
+    background-color: white;
+    border: 1px solid #fff;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    border-radius: .25rem;
+  }
+
+  .left
+{ float: left;
+  width: auto;
+  margin-right: 10px;}
+
+.right
+{ float: right; 
+  width: auto;
+  margin-left: 10px;}
+
+.center
+{ margin: auto;
+  display: block; 
+  text-align: center;
+  margin: 20px auto;}
+
+  h1, h2, h3, h4, h5, h6 
+{ font: normal 150% 'century gothic', arial, sans-serif;
+  color: #000;
+  margin: 0 0 15px 0;
+  padding: 15px 0 5px 0;}
+
+  /* .grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  } */
+
+  table tbody {
+     height:650px; overflow-y:scroll; display:block; border-style}
+  table thead { 
+    display:block; }
+  
+/* 
+  @media screen and (min-width: 600px) {
+    .card {
+      flex: 1 1 calc(50% - 2rem);
+    }
+  }
+  
+  @media screen and (min-width: 900px) {
+    .card {
+      flex: 1 1 calc(33% - 2rem);
+    }
+  } */
