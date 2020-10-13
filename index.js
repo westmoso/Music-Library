@@ -30,7 +30,7 @@ btn2.addEventListener("click", function () {
     xhr.open('GET', "http://www.devcodecampmusiclibrary.com/api/music/" + pageCounter2);
     xhr.onload = function () {
         var data = JSON.parse(xhr.responseText);
-        getById(data);
+        getBeatlesTacks(data);
         console.log(data.title)
     };
     xhr.send();
@@ -45,7 +45,7 @@ btn3.addEventListener("click", function () {
     xhr.open('GET', "http://www.devcodecampmusiclibrary.com/api/music/" + pageCounter3);
     xhr.onload = function () {
         var data = JSON.parse(xhr.responseText);
-        getById(data);
+        getPostalTracks(data);
         console.log(data.title)
     };
     xhr.send();
@@ -96,7 +96,44 @@ function getById() {
             console.log(errorThrown);
         },
     });
+}
 
+    function getBeatlesTacks() {
+        $.ajax({
+            url: "http://www.devcodecampmusiclibrary.com/api/music/",
+            dataType: "json",
+            type: "get",
+            success: function (data, textStatus, jQxhr) {
+                console.log(data);
+                for (var i = 0; i < data.length; i++) {
+                    $("#title").append(
+                        "<tr>" + "<td>" + data[i].title + "</tr>");
+                }
+            },
+            error: function (jQxhr, textStatus, errorThrown) {
+                console.log(errorThrown);
+            },
+        });
+    }
+
+        
+        function getPostalTracks() {
+            $.ajax({
+                url: "http://www.devcodecampmusiclibrary.com/api/music/",
+                dataType: "json",
+                type: "get",
+                success: function (data, textStatus, jQxhr) {
+                    console.log(data);
+                    for (var i = 0; i < data.length; i++) {
+                        $("#title").append(
+                            "<tr>" + "<td>" + data[i].title + "</tr>");
+                    }
+                },
+                error: function (jQxhr, textStatus, errorThrown) {
+                    console.log(errorThrown);
+                },
+            });
+        
 
     // }
 
@@ -109,4 +146,6 @@ getAllMusic();
 
 getById();
 
+getBeatlesTacks();
 
+getPostalTracks();

@@ -110,9 +110,8 @@ html {
   } */
 
   table tbody {
-     height:650px; overflow-y:scroll; display:block; border-style}
-  table thead { 
-    display:block; }
+     height:650px; overflow-y:scroll; display:block; border-style:solid}
+  table thead { display:block; }
   
 /* 
   @media screen and (min-width: 600px) {
